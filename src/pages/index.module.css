@@ -1,0 +1,26 @@
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:
+        url(../assets/images/waves.svg),
+        url(../assets/images/waves-darken.svg),
+        url(../assets/images/waves-secondary.svg),
+        url(../assets/images/waves-secondary-darken.svg);
+    background-repeat: no-repeat;
+    background-position: bottom, bottom, top, top;
+    background-size: 150%, 220%, 150%, 220%;
+    background-blend-mode: multiply;
+    transition: 0.3s;
+}
+
+:global(.dark) .hero {
+    background-blend-mode: luminosity;
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        background-size: 100%, 105%, 100%, 105%;
+    }
+}

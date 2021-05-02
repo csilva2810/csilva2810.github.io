@@ -1,0 +1,18 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #0f141a;
+    --primary-color: #00cba9;
+    --secondary-color: #ffd700;
+}
+
+:root.dark {
+    --bg-color: #0f141a;
+    --text-color: #ffffff;
+}
+
+html, body {
+    height: 100%;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.2s linear;
+}
