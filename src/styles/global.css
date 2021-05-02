@@ -14,5 +14,4 @@ html, body {
     height: 100%;
     color: var(--text-color);
     background-color: var(--bg-color);
-    transition: background-color 0.2s linear;
 }

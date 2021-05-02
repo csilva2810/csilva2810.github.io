@@ -12,7 +12,6 @@
     background-position: bottom, bottom, top, top;
     background-size: 150%, 220%, 150%, 220%;
     background-blend-mode: multiply;
-    transition: 0.3s;
 }
 
 :global(.dark) .hero {

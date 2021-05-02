@@ -3,6 +3,7 @@ import { ReactSVG } from "react-svg"
 
 import sunIcon from "../assets/images/sun.svg"
 import moonIcon from "../assets/images/moon.svg"
+import * as storage from "../services/storage"
 import * as styles from "./header.module.css"
 
 const themes = Object.freeze({
@@ -12,7 +13,7 @@ const themes = Object.freeze({
 
 export default function Header() {
   const [theme, setTheme] = React.useState(() => {
-    return localStorage.getItem("theme") || themes.light
+    return storage.getItem("theme") || themes.light
   })
   const toggleTheme = () => {
     setTheme(prev => {
@@ -24,7 +25,7 @@ export default function Header() {
     const [htmlElement] = document.getElementsByTagName("html")
     htmlElement.classList.remove(...Object.values(themes))
     htmlElement.classList.add(theme)
-    localStorage.setItem("theme", theme)
+    storage.setItem("theme", theme)
   }, [theme])
 
   return (
