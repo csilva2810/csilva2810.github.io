@@ -1,9 +1,10 @@
 import React, { useEffect } from "react"
 import { ReactSVG } from "react-svg"
 
-import sunIcon from "../assets/images/sun.svg"
-import moonIcon from "../assets/images/moon.svg"
-import * as storage from "../services/storage"
+import sunIcon from "../../assets/images/sun.svg"
+import moonIcon from "../../assets/images/moon.svg"
+import * as storage from "../../services/storage"
+
 import * as styles from "./header.module.css"
 
 const themes = Object.freeze({

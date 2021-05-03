@@ -49,7 +49,7 @@ export default function Profile() {
     return () => {
       clearTimeout(timeoutId)
     }
-  }, [currentAvatar])
+  }, [currentAvatar, avatars.length])
 
   return (
     <div className={styles.container}>
@@ -59,7 +59,12 @@ export default function Profile() {
         alt="Carlos avatar"
       />
       <h3 className={styles.title}>Hi, I'm Carlos!</h3>
-      <p>I'm a Front-End engineer from São Paulo, Brazil. 🇧🇷</p>
+      <p>
+        I'm a Front-End engineer from São Paulo, Brazil.{" "}
+        <span role="img" aria-label="Brazil flag">
+          🇧🇷
+        </span>
+      </p>
       <ul className={styles.contactList}>
         {contactInfo.map(({ name, link, icon }) => (
           <li key={name}>

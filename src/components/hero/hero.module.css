@@ -4,10 +4,10 @@
     align-items: center;
     justify-content: center;
     background-image:
-        url(../assets/images/waves.svg),
-        url(../assets/images/waves-darken.svg),
-        url(../assets/images/waves-secondary.svg),
-        url(../assets/images/waves-secondary-darken.svg);
+        url(../../assets/images/waves.svg),
+        url(../../assets/images/waves-darken.svg),
+        url(../../assets/images/waves-secondary.svg),
+        url(../../assets/images/waves-secondary-darken.svg);
     background-repeat: no-repeat;
     background-position: bottom, bottom, top, top;
     background-size: 150%, 220%, 150%, 220%;
