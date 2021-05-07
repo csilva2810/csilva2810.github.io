@@ -1,9 +1,13 @@
 import React, { useEffect } from "react"
 import { ReactSVG } from "react-svg"
+import classes from "classnames"
+import { Link } from "gatsby"
 
 import sunIcon from "../../assets/images/sun.svg"
 import moonIcon from "../../assets/images/moon.svg"
 import * as storage from "../../services/storage"
+
+import useAvatars from "../../hooks/use-avatars"
 
 import * as styles from "./header.module.css"
 
@@ -12,7 +16,7 @@ const themes = Object.freeze({
   dark: "dark",
 })
 
-export default function Header() {
+export default function Header({ isStatic, showHomeLink }) {
   const [theme, setTheme] = React.useState(() => {
     return storage.getItem("theme") || themes.light
   })
@@ -21,6 +25,7 @@ export default function Header() {
       return prev === themes.light ? themes.dark : themes.light
     })
   }
+  const avatar = useAvatars()
 
   useEffect(() => {
     const [htmlElement] = document.getElementsByTagName("html")
@@ -29,25 +34,38 @@ export default function Header() {
     storage.setItem("theme", theme)
   }, [theme])
 
+  const headerClass = classes(styles.header, { [styles.isStatic]: isStatic })
   return (
-    <header className={styles.header}>
+    <header className={headerClass}>
+      {showHomeLink && (
+        <Link
+          className={styles.backButton}
+          to="/"
+          arial-label="Navigate to home page"
+        >
+          <img src={avatar} alt="Carlos avatar" />
+        </Link>
+      )}
+
       <button
         className={styles.toggleButton}
         onClick={toggleTheme}
-        title={
+        aria-label={
           theme === themes.light
-            ? "Switch to dark theme"
-            : "Switch to light theme"
+            ? "Light theme active. Switch to dark."
+            : "Dark theme active. Switch to light."
         }
       >
         <ReactSVG
-          src={theme === themes.light ? sunIcon : moonIcon}
-          alt={
-            theme === themes.light ? "Light theme active" : "Dark theme active"
-          }
           className={styles.icon}
+          src={theme === themes.light ? sunIcon : moonIcon}
         />
       </button>
     </header>
   )
+}
+
+Header.defaultProps = {
+  isStatic: false,
+  showHomeLink: false,
 }

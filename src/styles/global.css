@@ -1,13 +1,34 @@
 :root {
     --bg-color: #ffffff;
-    --text-color: #0f141a;
-    --primary-color: #00cba9;
+    --surface-color: #ffffff;
+    --text-color: #373d3f;
+    --text-color-2: #8c979a;
+    --primary-color: #00ba89;
     --secondary-color: #ffd700;
+    --border-color: #dadedf;
+
+    --medium-breakpoint: 768px;
+    --large-breakpoint: 992px;
+
+    --deckgo-highlight-code-font-family: "Source Code Pro", monospace;
+    --deckgo-highlight-code-font-size: 14px;
+    --deckgo-highlight-code-white-space: pre;
+    --deckgo-highlight-code-carbon-border-radius: 8px;
 }
 
 :root.dark {
     --bg-color: #0f141a;
-    --text-color: #ffffff;
+    --surface-color: #2e3440;
+    --text-color: #f2f3f4;
+    --text-color-2: #c1c7c9;
+    --primary-color: #00cfa7;
+    --border-color: #131516;
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --deckgo-highlight-code-carbon-margin: 0 -16px;
+    }
 }
 
 html, body {

@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react"
 import { ReactSVG } from "react-svg"
 
-import avatar from "../../assets/images/avatar.png"
-import avatar2 from "../../assets/images/avatar-2.png"
-import avatar3 from "../../assets/images/avatar-3.png"
 import linkedInIcon from "../../assets/images/linkedin.svg"
 import twitterIcon from "../../assets/images/twitter.svg"
 import githubIcon from "../../assets/images/github.svg"
 import emailIcon from "../../assets/images/email.svg"
+
+import useAvatars from "../../hooks/use-avatars"
 
 import * as styles from "./profile.module.css"
 
@@ -35,29 +34,11 @@ const contactInfo = [
 ]
 
 export default function Profile() {
-  const [avatars] = useState([avatar, avatar2, avatar3])
-  const [currentAvatar, setCurrentAvatar] = useState(0)
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setCurrentAvatar(prev => {
-        const next = (prev + 1) % avatars.length
-        return next
-      })
-    }, 3000)
-
-    return () => {
-      clearTimeout(timeoutId)
-    }
-  }, [currentAvatar, avatars.length])
+  const avatar = useAvatars()
 
   return (
     <div className={styles.container}>
-      <img
-        className={styles.image}
-        src={avatars[currentAvatar]}
-        alt="Carlos avatar"
-      />
+      <img className={styles.image} src={avatar} alt="Carlos avatar" />
       <h3 className={styles.title}>Hi, I'm Carlos!</h3>
       <p>
         I'm a Front-End engineer from São Paulo, Brazil.{" "}
@@ -68,7 +49,12 @@ export default function Profile() {
       <ul className={styles.contactList}>
         {contactInfo.map(({ name, link, icon }) => (
           <li key={name}>
-            <a href={link} className={styles.link}>
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
               <ReactSVG src={icon} alt={name} className={styles.icon} />
             </a>
           </li>

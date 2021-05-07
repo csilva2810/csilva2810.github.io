@@ -1,0 +1,49 @@
+.postList {
+    min-height: 100vh;
+    padding: 40px 8px;
+}
+
+.postListTitle {
+    margin-top: 0;
+}
+
+.postTitle {
+    margin-top: 0;
+    margin-bottom: 0.1rem;
+}
+
+.postDate {
+    display: flex;
+    align-items: baseline;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+}
+
+.timeToRead {
+    display: block;
+    margin-left: 8px;
+    color: var(--text-color-2);
+    font-size: 0.7rem;
+}
+
+.postExcerpt {
+    margin-bottom: 0;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    margin-top: 0.5rem;
+    list-style: none;
+}
+
+.tag {
+    margin: 0;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    border: 1px solid var(--border-color);
+}

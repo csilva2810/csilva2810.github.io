@@ -1,0 +1,15 @@
+.card {
+    display: block;
+    color: var(--text-color);
+    padding: 16px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    background-color: var(--surface-color);
+    box-shadow: 0 3px 10px -1px rgb(0 0 0 / 18%);
+    border: 1px solid var(--border-color);
+}
+
+:global(.dark) .card {
+    box-shadow: 0 3px 10px -1px rgb(0 0 0 / 38%);
+    border: 0;
+}
