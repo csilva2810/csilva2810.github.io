@@ -15,10 +15,15 @@
     "deploy": "gatsby build && gh-pages -d public -b main"
   },
   "dependencies": {
+    "@deckdeckgo/highlight-code": "^2.6.0",
+    "classnames": "^2.3.1",
     "gatsby": "^3.4.0",
     "gatsby-plugin-manifest": "^3.4.0",
     "gatsby-plugin-react-helmet": "^4.4.0",
     "gatsby-plugin-typography": "^3.4.0",
+    "gatsby-remark-highlight-code": "^2.2.1",
+    "gatsby-source-filesystem": "^3.4.0",
+    "gatsby-transformer-remark": "^4.1.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

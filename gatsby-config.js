@@ -13,6 +13,26 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              theme: `nord`,
+            },
+          },
+        ],
+      },
+    },
+    {
       resolve: "gatsby-plugin-typography",
       options: {
         pathToConfigModule: `src/utils/typography`,
@@ -24,8 +44,8 @@ module.exports = {
         name: `Carlos Silva's Blog`,
         short_name: `Carlos' Blog`,
         start_url: `/`,
-        background_color: `#00cba9`,
-        theme_color: `#00cba9`,
+        background_color: `#ffd700`,
+        theme_color: `#ffd700`,
         display: `standalone`,
         icon: `src/assets/images/favicon.png`,
       },
