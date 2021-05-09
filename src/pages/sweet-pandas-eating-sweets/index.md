@@ -1,7 +1,13 @@
 ---
-title: "🐼 Sweet Pandas Eating Sweets"
+title: "Sweet Pandas Eating Sweets"
 date: "2017-08-10"
-tags: "Javascript,CSS,HTML,NodeJS,React"
+tags: 
+  - Javascript
+  - CSS
+  - HTML
+  - NodeJS
+  - React
+thumbnail: "https://source.unsplash.com/_9a-3NO5KJE"
 ---
 
 Pandas are really sweet.

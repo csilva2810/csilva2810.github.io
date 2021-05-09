@@ -7,6 +7,7 @@
     --secondary-color: #ffd700;
     --border-color: #dadedf;
 
+    --small-breakpoint: 576px;
     --medium-breakpoint: 768px;
     --large-breakpoint: 992px;
 

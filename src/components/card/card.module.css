@@ -1,12 +1,17 @@
 .card {
     display: block;
     color: var(--text-color);
-    padding: 16px;
-    margin-bottom: 24px;
     border-radius: 8px;
     background-color: var(--surface-color);
     box-shadow: 0 3px 10px -1px rgb(0 0 0 / 18%);
     border: 1px solid var(--border-color);
+    transition: 0.3s ease;
+}
+
+.card:hover,
+.card:focus-within {
+    box-shadow: 0 3px 10px -2px rgb(0 0 0 / 08%),
+                0 4px 12px -1px rgba(0 0 0 / 18%);
 }
 
 :global(.dark) .card {

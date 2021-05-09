@@ -10,19 +10,20 @@ theme.googleFonts = [
     styles: ["400", "600"],
   },
 ]
-theme.overrideThemeStyles = (test, options, styles) => {
-  return {
-    a: {
-      color: "var(--primary-color)",
-      textDecoration: "none",
-      textShadow: "none",
-      backgroundImage: "none",
-    },
-    code: {
-      fontFamily: ["Source Code Pro", "monospace"].join(","),
-    },
-  }
-}
+theme.overrideThemeStyles = () => ({
+  a: {
+    color: "var(--primary-color)",
+    textDecoration: "none",
+    textShadow: "none",
+    backgroundImage: "none",
+  },
+  "a:hover": {
+    textDecoration: "underline",
+  },
+  code: {
+    fontFamily: ["Source Code Pro", "monospace"].join(","),
+  },
+})
 
 const typography = new Typography(theme)
 
