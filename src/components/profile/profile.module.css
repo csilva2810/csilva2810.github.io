@@ -1,15 +1,26 @@
 .container {
+    padding: 0 16px;
     text-align: center;
 }
 
 .title {
     margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .image {
     display: block;
     margin: 0 auto;
-    width: 200px;
+    width: 160px;
+    height: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .image {
+        width: 200px;
+    }
 }
 
 .contactList {

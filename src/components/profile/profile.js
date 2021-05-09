@@ -39,7 +39,7 @@ export default function Profile() {
   return (
     <div className={styles.container}>
       <img className={styles.image} src={avatar} alt="Carlos avatar" />
-      <h3 className={styles.title}>Hi, I'm Carlos!</h3>
+      <p className={styles.title}>Hi, I'm Carlos!</p>
       <p>
         I'm a Front-End engineer from São Paulo, Brazil.{" "}
         <span role="img" aria-label="Brazil flag">
