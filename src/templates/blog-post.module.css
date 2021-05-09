@@ -1,0 +1,36 @@
+.coverContainer {
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: 0.3s;
+}
+
+.coverGradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        var(--text-color-2),
+      rgba(255, 255, 255, 0.7) 50%,
+        var(--bg-color)
+    );
+}
+
+:global(.dark) .coverGradient {
+    background: linear-gradient(
+        var(--bg-color),
+        rgba(0, 0, 0, 0.5) 50%,
+        var(--bg-color)
+    );
+}
+
+.postContainer {
+    position: relative;
+    margin-top: -50vh;
+}
