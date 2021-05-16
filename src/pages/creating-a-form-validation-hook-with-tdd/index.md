@@ -11,8 +11,6 @@ tags:
   - TDD
 ---
 
-## Introduction
-
 Hi guys! My name is Carlos, I'm from Brazil and I'm a front-end web developer. This is my first article in life and I'm very excited about that. I hope you can learn something from it and I would really appreciate if you could leave your feedback.
 
 ## Inspiration
