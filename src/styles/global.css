@@ -1,39 +1,41 @@
 :root {
-    --bg-color: #ffffff;
-    --surface-color: #ffffff;
-    --text-color: #373d3f;
-    --text-color-2: #8c979a;
-    --primary-color: #00ba89;
-    --secondary-color: #ffd700;
-    --border-color: #dadedf;
+  --bg-color: #ffffff;
+  --surface-color: #ffffff;
+  --text-color: #373d3f;
+  --text-color-2: #8c979a;
+  --primary-color: #00ba89;
+  --secondary-color: #ffd700;
+  --border-color: #dadedf;
 
-    --small-breakpoint: 576px;
-    --medium-breakpoint: 768px;
-    --large-breakpoint: 992px;
+  --small-breakpoint: 576px;
+  --medium-breakpoint: 768px;
+  --large-breakpoint: 992px;
 
-    --deckgo-highlight-code-font-family: "Source Code Pro", monospace;
-    --deckgo-highlight-code-font-size: 14px;
-    --deckgo-highlight-code-white-space: pre;
-    --deckgo-highlight-code-carbon-border-radius: 8px;
+  --deckgo-highlight-code-font-family: "Source Code Pro", monospace;
+  --deckgo-highlight-code-font-size: 14px;
+  --deckgo-highlight-code-white-space: pre;
+  --deckgo-highlight-code-carbon-border-radius: 8px;
+  --deckgo-highlight-code-carbon-margin: 16px auto;
 }
 
 :root.dark {
-    --bg-color: #0f141a;
-    --surface-color: #2e3440;
-    --text-color: #f2f3f4;
-    --text-color-2: #c1c7c9;
-    --primary-color: #00cfa7;
-    --border-color: #131516;
+  --bg-color: #0f141a;
+  --surface-color: #2e3440;
+  --text-color: #f2f3f4;
+  --text-color-2: #c1c7c9;
+  --primary-color: #00cfa7;
+  --border-color: #131516;
 }
 
 @media screen and (min-width: 768px) {
-    :root {
-        --deckgo-highlight-code-carbon-margin: 0 -16px;
-    }
+  :root {
+    --deckgo-highlight-code-carbon-margin: 16px -16px;
+  }
 }
 
-html, body {
-    height: 100%;
-    color: var(--text-color);
-    background-color: var(--bg-color);
+html,
+body {
+  height: 100%;
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
